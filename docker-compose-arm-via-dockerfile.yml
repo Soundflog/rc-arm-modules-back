@@ -1,0 +1,38 @@
+services:
+  dock-arm:
+    build: ./arm/.
+    ports:
+      - ${arm_port}:8080
+    environment:
+      arm_profile: ${arm_profile}
+      db_arm_connection: ${db_arm_connection}
+      db_arm_login: ${db_arm_login}
+      db_arm_pass: ${db_arm_pass}
+      enable_migrations: ${enable_migrations}
+      jpa_show_sql: ${arm_jpa_show_sql}
+      jwt_lifetime_days: ${jwt_lifetime_days}
+      jwt_secret: ${jwt_secret}
+      security_develop_mode: ${security_develop_mode}
+      medcard_root_url: ${medcard_root_url}
+    volumes:
+      - /home/logs:/application/arm-logs
+
+  dock-med-cart:
+    build: ./med-cart/.
+    ports:
+      - 8081:8081
+    environment:
+      db_medcart_connection: ${db_medcart_connection}
+      db_medcart_login: ${db_medcart_login}
+      db_medcart_pass: ${db_medcart_pass}
+      jpa_show_sql: false
+
+  dock-icf:
+    build: ./icf/.
+    ports:
+      - 8082:8082
+    environment:
+      db_icf_connection: ${db_icf_connection}
+      db_icf_login: ${db_icf_login}
+      db_icf_pass: ${db_icf_pass}
+      jpa_show_sql: false

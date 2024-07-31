@@ -1,0 +1,5 @@
+ru\rightcode\arm\ConfigurationTest.class
+ru\rightcode\arm\TestArmApplication.class
+ru\rightcode\arm\controller\ModuleControllerTest.class
+ru\rightcode\arm\controller\RehabProgramControllerTest.class
+ru\rightcode\arm\IntegrationTestBase.class
