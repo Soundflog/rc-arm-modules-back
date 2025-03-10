@@ -30,3 +30,7 @@ docker compose -f docker-compose-arm-dockerfile.yml up
 * Просмотр и редактирование одной или нескольких шкал оценивания анкет.
   
 [Frontend-часть](https://github.com/Soundflog/rc-constructor-forms)
+
+![image](https://github.com/user-attachments/assets/2f12d5f2-6b2a-4584-8e30-dcf00d6a3c23)
+
+![doc-modules](https://github.com/user-attachments/assets/95c26eac-20a7-4864-8d00-26e7203e6d61)
